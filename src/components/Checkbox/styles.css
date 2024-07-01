@@ -1,0 +1,55 @@
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.custom-checkbox--done:not(:checked) {
+  background-color: white;
+  border-color: #ccc; 
+}
+
+.custom-checkbox--todo:not(:checked) {
+  background-color: white;
+  border-color: #e88d39; 
+}
+
+.custom-checkbox--done:checked {
+  background-color: #4ac959;
+  border-color: #4ac959;
+}
+
+.custom-checkbox--todo:checked {
+  background-color: #e88d39;
+  border-color: #e88d39;
+}
+
+.custom-checkbox--done::after {
+  content: '✓';
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-checkbox--todo::after {
+  content: '✓';
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

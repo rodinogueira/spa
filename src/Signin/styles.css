@@ -1,0 +1,109 @@
+.signin-form {
+  width: 100%;
+  max-width: 342px;
+  margin: 0 auto;
+}
+
+.signin-form__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.signin-form__input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-family: Montserrat;
+  size: 24px;
+  color: #000000;
+}
+
+.signin-form__input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #959595;
+  height: 54px;
+}
+
+.signin-form__input:focus {
+  border-color: #959595; /* Cor da borda quando o campo está em foco */
+  outline: none; /* Remove o contorno padrão do navegador */
+  box-shadow: 0 0 5px rgba(149, 149, 149, 0.5); /* Adiciona uma sombra ao redor do campo quando em foco */
+}
+
+.signin-form__submit-button {
+  width: 300px;
+  height: 64px;
+  background-color: #4ac959;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29.26px;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.signin-form__submit-button:hover {
+  background-color: #42b34c;
+}
+
+.signin__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.signin__title {
+  font-family: Montserrat;
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: left;
+}
+
+.signin__text {
+  font-family: 'Montserrat', sans-serif;
+  color: #999999;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: left;
+  color:#4AC959;
+
+}
+
+.signin__header {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+}
+
+/* Media query para dispositivos menores */
+@media (max-width: 768px) {
+  .signin__title {
+    font-size: 48px; /* Reduzir o tamanho do título para dispositivos menores */
+    line-height: 48px; /* Ajustar a altura da linha para manter proporção */
+  }
+
+  .signin__text {
+    font-size: 24px; /* Reduzir o tamanho do texto para dispositivos menores */
+    line-height: 32px; /* Ajustar a altura da linha para manter proporção */
+  }
+  
+  .signin__logo {
+    max-width: 100px; /* Defina o tamanho máximo desejado para a imagem em dispositivos menores */
+  }
+}

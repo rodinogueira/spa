@@ -1,0 +1,193 @@
+.task-lists-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .task-lists {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    border-top: 20px solid #E88D39;
+    padding: 16px;
+    width: 380px;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+  }
+
+  .clear-button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .clear-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .task-text {
+    flex: 1;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+  
+  .task-text--editing {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .task-delete-link {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    color: #999999;
+    margin-left: auto;
+  }
+
+  .task-add-link {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    color:  #000000;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    height: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .task-lists {
+      flex-direction: column;
+    }
+  }
+  
+  .container__subtitle--orange,
+  .container__description--orange {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.26px;
+    text-align: center;       
+  }
+
+  .container__subtitle--green {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.26px;
+    text-align: center;    
+  }
+  
+  .container__description--green {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: center;  
+  }
+
+  .task-add-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 8px;
+  }
+
+  .task-add-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    outline: none;
+  }
+
+  .task-add-checkbox::before {
+    content: '✓';
+    color: #4AC959;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .task-add-checkbox:checked::before {
+    opacity: 1;
+  }
+
+  .new-task-input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .new-task-input input {
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-left: 40px;
+    outline: none;
+    border: none;
+  }
+
+  .new-task-input input:focus {
+    border-color: none;
+  }
+  
+  .task-add-link {
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  .task-add-link--save {
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #E88D39;
+  }
+
+  .task-add-link--cancel {
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #999999;
+    margin-right: 6px;
+  }

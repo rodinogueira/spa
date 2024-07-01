@@ -1,0 +1,139 @@
+.contact-form {
+  background: white;
+  padding: 3rem 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 16px 24px 0px #06152B1F;
+  border-radius: 8px;
+  margin-top: 22px;
+  margin-bottom: 40px;
+}
+
+.contact-form__avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact-form__bg {
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 41px);
+  transform: translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: 166px;
+  height: 16px;
+}
+
+.contact-form__avatar {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.contact-form__avatar-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.contact-form__title-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+  max-width: 500px;
+}
+
+.contact-form__icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.contact-form__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.26px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.contact-form__title-bold {
+  font-weight: bold;
+}
+
+.contact-form__form {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form__input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-form__input-group--split {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.contact-form__input-group-item {
+  flex: 1;
+}
+
+.contact-form__label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.5px;
+  text-align: left;
+  font-family: Montserrat;
+  color: #06152B;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form__textarea {
+  height: 178px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.contact-form__submit-button {
+  margin-top: 10px;
+  height: 52px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #4AC959;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form__submit-button:hover {
+  background-color: #42b34c;
+}

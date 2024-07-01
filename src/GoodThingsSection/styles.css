@@ -1,0 +1,147 @@
+.good-things-section {
+  height: 672px;
+  padding: 0 5vw;
+  position: relative;
+}
+
+.good-things-section__carousel {
+  display: flex;
+  overflow-x: hidden;
+  gap: 6px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: -400px;
+}
+
+.good-things-section__card {
+  flex: 0 0 360px;
+  height: 430px;
+  border-radius: 16px;
+  scroll-snap-align: start;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  margin-left: auto;
+  box-shadow: 8px 8px 24px 0px #0C29D029; 
+}
+
+.good-things-section__card img {
+  width: 100%;
+  height: auto;
+}
+
+.good-things-section__card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.good-things-section__card p {
+  margin: 0;
+  font-size: 18px;
+  padding: 20px;
+  margin-left: 12px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+
+.good-things-section__bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.good-things-section__bullet {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.good-things-section__bullet--active {
+  background-color: #4ac959;
+}
+
+.good-things-section__green-box {
+  position: relative;
+  top: 0px;
+  background-color: #4ac959;
+  margin-right: 80px;
+  margin-bottom: 80px;
+  padding: 0 5vw;
+  height: 520px;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.good-things-section__green-box-heading {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52.8px;
+  text-align: left;
+  color: #fff;
+  padding-top: 100px;
+  padding-left: 45px;
+}
+
+.good-things-section__read-more {
+  display: block;
+  text-decoration: none;
+  color: #42D76B;
+  margin-left: 32px;
+  font: Soleil;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  position: absolute;
+  bottom: 23px;
+}
+
+.good-things-section__read-more:hover {
+  text-decoration: underline;
+}
+
+.good-things-section__link {
+  width: 86px;
+  height: 31px;
+  padding: 6px 12px;
+  margin-top: 20px;
+  margin-left: 30px;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid #9499B3;
+  display: inline-block;
+  text-decoration: none;
+  color: #9499B3;
+}  
+
+.good-things-section__link:hover {
+  opacity: 1;
+}
+
+.good-things-section__icone-coopers {
+  position: absolute;
+  top: 203px;
+  left: 88%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 49px;
+  height: 56px;
+}
+
+@media (max-width: 768px) {
+  .good-things-section__green-box {
+    margin-right: 0;
+  }
+}
