@@ -3,7 +3,7 @@
   padding: 3rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: 0px 16px 24px 0px #06152B1F;
+  box-shadow: 0px 16px 24px 0px #06152b1f;
   border-radius: 8px;
   margin-top: 22px;
   margin-bottom: 40px;
@@ -97,7 +97,7 @@
   line-height: 27.5px;
   text-align: left;
   font-family: Montserrat;
-  color: #06152B;
+  color: #06152b;
 }
 
 .contact-form__input,
@@ -127,7 +127,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #4AC959;
+  background-color: #4ac959;
   border: none;
   cursor: pointer;
   border-radius: 5px;

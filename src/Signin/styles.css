@@ -81,8 +81,7 @@
   font-weight: 700;
   line-height: 64px;
   text-align: left;
-  color:#4AC959;
-
+  color: #4ac959;
 }
 
 .signin__header {
@@ -102,7 +101,7 @@
     font-size: 24px; /* Reduzir o tamanho do texto para dispositivos menores */
     line-height: 32px; /* Ajustar a altura da linha para manter proporção */
   }
-  
+
   .signin__logo {
     max-width: 100px; /* Defina o tamanho máximo desejado para a imagem em dispositivos menores */
   }

@@ -7,11 +7,7 @@ const ProtectedComponent = ({ children }) => {
   const { user } = useAuth();
 
   if (!user) {
-    return (
-      <div className="protected-wrapper">
-        {children}
-      </div>
-    );
+    return <div className="protected-wrapper">{children}</div>;
   }
 
   return <div className="protected-wrapper">{children}</div>;

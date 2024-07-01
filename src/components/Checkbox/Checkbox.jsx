@@ -10,7 +10,7 @@ const Checkbox = ({ checked, onChange, done }) => {
 
   return (
     <input
-      type='checkbox'
+      type="checkbox"
       checked={checked}
       onChange={onChange}
       style={checkboxStyle}

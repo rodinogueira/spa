@@ -1,5 +1,5 @@
-import axios from "axios";
-import Cookies from "js-cookie";
+import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const BASE_URL = process.env.REACT_APP_API_URL;
 
@@ -16,7 +16,7 @@ export function signin(data) {
 
 export function userLogged() {
   const response = axios.get(`${BASE_URL}/me`, {
-    headers: { Authorization: `Bearer ${Cookies.get("token")}` },
+    headers: { Authorization: `Bearer ${Cookies.get('token')}` },
   });
 
   return response;

@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ContactFormCloseButton = ({ onClose }) => {
-  return (
-    <button onClick={onClose}>
-      Close
-    </button>
-  );
+  return <button onClick={onClose}>Close</button>;
 };
 
 ContactFormCloseButton.propTypes = {

@@ -10,13 +10,11 @@ export const ModalRoot = ({ isOpened, onClose, children }) => {
   }
 
   return createPortal(
-    <div className='modal-wrapper'>
-      <div className='modal__overlay' onClick={onClose}></div>
-      <div className='modal__container'>
-        {children}
-      </div>
+    <div className="modal-wrapper">
+      <div className="modal__overlay" onClick={onClose}></div>
+      <div className="modal__container">{children}</div>
     </div>,
-    document.getElementById('modal')
+    document.getElementById('modal'),
   );
 };
 

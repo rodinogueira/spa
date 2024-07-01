@@ -3,9 +3,9 @@ import { render } from '@testing-library/react';
 import Footer from './Footer';
 
 it('should render footer element with correct class name', () => {
-    const { container } = render(<Footer />);
-    const footerElement = container.querySelector('.footer');
-    expect(footerElement).toBeInTheDocument();
+  const { container } = render(<Footer />);
+  const footerElement = container.querySelector('.footer');
+  expect(footerElement).toBeInTheDocument();
 });
 
 jest.mock('../../assets/footer-bg.png', () => '');

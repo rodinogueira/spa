@@ -23,15 +23,17 @@ const GoodThingsSection = () => {
       imageSrc: card2Image,
       title: 'function',
       link: '/card2',
-      description: 'Mark one activity as done makes your brain understands the power of doing.',
+      description:
+        'Mark one activity as done makes your brain understands the power of doing.',
     },
     {
       id: 3,
       imageSrc: card3Image,
       title: 'function',
       link: '/card3',
-      description: 'Careful with missunderstanding the difference between a list of things and a list of desires.',
-    }
+      description:
+        'Careful with missunderstanding the difference between a list of things and a list of desires.',
+    },
   ];
 
   const handleCardClick = (id) => {
@@ -58,33 +60,38 @@ const GoodThingsSection = () => {
   };
 
   return (
-    <section className='good-things-section'>
-      <div className='good-things-section__green-box'>
-        <h1 className='good-things-section__green-box-heading'>good things</h1>
+    <section className="good-things-section">
+      <div className="good-things-section__green-box">
+        <h1 className="good-things-section__green-box-heading">good things</h1>
       </div>
-      <div className='good-things-section__carousel-container'>
-        <div className='good-things-section__carousel' ref={carouselRef}>
+      <div className="good-things-section__carousel-container">
+        <div className="good-things-section__carousel" ref={carouselRef}>
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className='good-things-section__card'
+              className="good-things-section__card"
               onClick={() => handleCardClick(card.id)}
             >
-              <img src={card.imageSrc} alt={card.title} onClick={() => handleImageClick(index)} />
-              <a href='#' className='good-things-section__link'>function</a>
+              <img
+                src={card.imageSrc}
+                alt={card.title}
+                onClick={() => handleImageClick(index)}
+              />
+              <a href="#" className="good-things-section__link">
+                function
+              </a>
               <p>{card.description}</p>
-              <a href={card.link} className='good-things-section__read-more'>Read More</a>
-              <div className='good-things-section__icone-coopers'>
-                <img
-                  src={iconeCoopers}
-                  alt='Additional Image'
-                />
+              <a href={card.link} className="good-things-section__read-more">
+                Read More
+              </a>
+              <div className="good-things-section__icone-coopers">
+                <img src={iconeCoopers} alt="Additional Image" />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className='good-things-section__bullets'>
+      <div className="good-things-section__bullets">
         {cards.map((card, index) => (
           <span
             key={card.id}

@@ -28,33 +28,30 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='nav-bar'>
-      <div className='nav-bar__logo-container'>
-        <img src={logoImage} alt='Logo' className='nav-bar__logo-image' />
+    <nav className="nav-bar">
+      <div className="nav-bar__logo-container">
+        <img src={logoImage} alt="Logo" className="nav-bar__logo-image" />
       </div>
-      <div className='nav-bar__auth-controls'>
+      <div className="nav-bar__auth-controls">
         {!user ? (
           <div>
-            <button
-              className='nav-bar__auth-button--login'
-              onClick={openModal}
-            >
+            <button className="nav-bar__auth-button--login" onClick={openModal}>
               entrar
             </button>
             <Modal.Root isOpened={isModalOpened}>
               <Modal.CloseButton onClose={closeModal} />
               <Modal.Content>
-                <Signin onClose={() => setIsModalOpened(false)} onSubmit={handleLogin} />
+                <Signin
+                  onClose={() => setIsModalOpened(false)}
+                  onSubmit={handleLogin}
+                />
               </Modal.Content>
             </Modal.Root>
-            {loginError && <p className='nav-bar__login-error'>{loginError}</p>}
+            {loginError && <p className="nav-bar__login-error">{loginError}</p>}
           </div>
         ) : (
           <div>
-            <button
-              className='nav-bar__auth-button--logout'
-              onClick={logout}
-            >
+            <button className="nav-bar__auth-button--logout" onClick={logout}>
               sair
             </button>
           </div>

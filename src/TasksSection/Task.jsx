@@ -4,11 +4,20 @@ import { Checkbox } from '../components/Checkbox/Checkbox';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-const Task = ({ id, text, done, index, moveTask, updateTask, toggleTask, deleteTask }) => {
+const Task = ({
+  id,
+  text,
+  done,
+  index,
+  moveTask,
+  updateTask,
+  toggleTask,
+  deleteTask,
+}) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedText, setEditedText] = useState(text);
   const [isChecked, setIsChecked] = useState(false);
-  console.log(isChecked, 'CHECKED')
+  console.log(isChecked, 'CHECKED');
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag(() => ({
@@ -68,29 +77,25 @@ const Task = ({ id, text, done, index, moveTask, updateTask, toggleTask, deleteT
       onDragStart={handleDragStart}
       draggable
     >
-
-      <Checkbox 
+      <Checkbox
         checked={isChecked}
         onChange={handleCheckboxChange}
         done={done}
       />
       {isEditing ? (
         <input
-          type='text'
+          type="text"
           value={editedText}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           onKeyDown={handleKeyDown}
           autoFocus
-          className='task-text task-text--editing'
+          className="task-text task-text--editing"
         />
       ) : (
-        <span className='task-text'>{text}</span>
+        <span className="task-text">{text}</span>
       )}
-      <a
-        onClick={() => deleteTask(id)}
-        className='task-delete-link'
-      >
+      <a onClick={() => deleteTask(id)} className="task-delete-link">
         delete
       </a>
     </div>

@@ -9,7 +9,9 @@ jest.mock('../assets/grafismo.png', () => 'grafismo.png');
 describe('ContactFormAvatar Component', () => {
   it('should render the avatar container with the correct class name', () => {
     render(<ContactFormAvatar />);
-    const avatarContainer = screen.getByRole('img', { name: /Imagem Adicional/i });
+    const avatarContainer = screen.getByRole('img', {
+      name: /Imagem Adicional/i,
+    });
     expect(avatarContainer).toHaveClass('contact-form__bg');
   });
 

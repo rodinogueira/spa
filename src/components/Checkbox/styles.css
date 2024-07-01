@@ -16,12 +16,12 @@
 
 .custom-checkbox--done:not(:checked) {
   background-color: white;
-  border-color: #ccc; 
+  border-color: #ccc;
 }
 
 .custom-checkbox--todo:not(:checked) {
   background-color: white;
-  border-color: #e88d39; 
+  border-color: #e88d39;
 }
 
 .custom-checkbox--done:checked {

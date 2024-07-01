@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from '../Container';
 import { useAuth } from '../context/AuthContext';
-import { deleteToDoTask, updateToDoTask, createToDoTask, findAllToDoTasks } from '../services/toDoService';
+import {
+  deleteToDoTask,
+  updateToDoTask,
+  createToDoTask,
+  findAllToDoTasks,
+} from '../services/toDoService';
 import Task from './Task';
 import './styles.css';
 
@@ -33,8 +38,8 @@ const TaskList = () => {
   }, [user]);
 
   useEffect(() => {
-    const filteredToDoTasks = allTasks.filter(task => !task.done);
-    const filteredDoneTasks = allTasks.filter(task => task.done);
+    const filteredToDoTasks = allTasks.filter((task) => !task.done);
+    const filteredDoneTasks = allTasks.filter((task) => task.done);
 
     setToDoTasks(filteredToDoTasks);
     setDoneTasks(filteredDoneTasks);
@@ -71,8 +76,8 @@ const TaskList = () => {
     try {
       const updatedTask = { ...task, done: true };
       await updateToDoTask(task._id, updatedTask);
-      setAllTasks((prevTasks) => 
-        prevTasks.map((t) => (t._id === task._id ? updatedTask : t))
+      setAllTasks((prevTasks) =>
+        prevTasks.map((t) => (t._id === task._id ? updatedTask : t)),
       );
     } catch (error) {
       console.error('Erro ao mover tarefa para concluída:', error);
@@ -83,8 +88,8 @@ const TaskList = () => {
     try {
       const updatedTask = { ...task, done: false };
       await updateToDoTask(task._id, updatedTask);
-      setAllTasks((prevTasks) => 
-        prevTasks.map((t) => (t._id === task._id ? updatedTask : t))
+      setAllTasks((prevTasks) =>
+        prevTasks.map((t) => (t._id === task._id ? updatedTask : t)),
       );
     } catch (error) {
       console.error('Erro ao mover tarefa para a fazer:', error);
@@ -94,31 +99,36 @@ const TaskList = () => {
   const toggleTask = async (id) => {
     try {
       const taskToToggle = allTasks.find((task) => task._id === id);
-  
+
       if (!taskToToggle) {
         return { success: false, message: 'Tarefa não encontrada.' };
       }
 
       taskToToggle.done = !taskToToggle.done;
-  
+
       return { success: true, task: taskToToggle };
     } catch (error) {
       console.error('Erro ao alternar o estado da tarefa:', error);
-      return { success: false, message: 'Erro ao alternar o estado da tarefa.' };
+      return {
+        success: false,
+        message: 'Erro ao alternar o estado da tarefa.',
+      };
     }
   };
-  
+
   const clearTasks = () => {
     setAllTasks((prevTasks) => {
       const filteredTasks = prevTasks.filter((task) => !task.checked);
       return filteredTasks;
     });
-  };  
+  };
 
   const deleteTask = async (taskId) => {
     try {
       await deleteToDoTask(taskId);
-      setAllTasks((prevTasks) => prevTasks.filter((task) => task._id !== taskId));
+      setAllTasks((prevTasks) =>
+        prevTasks.filter((task) => task._id !== taskId),
+      );
       getToDoTasks();
     } catch (error) {
       console.log(error);
@@ -129,7 +139,7 @@ const TaskList = () => {
     try {
       const response = await updateToDoTask(taskId, updatedData);
       setAllTasks((prevTasks) =>
-        prevTasks.map((task) => (task._id === taskId ? response : task))
+        prevTasks.map((task) => (task._id === taskId ? response : task)),
       );
       getToDoTasks();
     } catch (error) {
@@ -145,9 +155,9 @@ const TaskList = () => {
     event.preventDefault();
     const taskId = event.dataTransfer.getData('taskId');
     console.log(`Task ID received: ${taskId}`);
-  
-    const task = allTasks.find(task => task._id === taskId);
-  
+
+    const task = allTasks.find((task) => task._id === taskId);
+
     if (task) {
       console.log(`Task found: ${task.text}`);
       if (task.done) {
@@ -160,7 +170,7 @@ const TaskList = () => {
     } else {
       console.log('Task not found');
     }
-  };  
+  };
 
   const handleCancelNewTask = () => {
     setNewTaskText('');
@@ -168,13 +178,17 @@ const TaskList = () => {
   };
 
   return (
-    <div className='task-lists-wrapper'>
-      <div className='task-lists'>
-        <Container.Root borderColor='#E88D39'>
+    <div className="task-lists-wrapper">
+      <div className="task-lists">
+        <Container.Root borderColor="#E88D39">
           <Container.Header>
             <Container.Title>To-Do</Container.Title>
-            <Container.SubTitle className='container__subtitle--orange'>Take a breath.</Container.SubTitle>
-            <Container.Description className='container__description--orange'>Start doing.</Container.Description>
+            <Container.SubTitle className="container__subtitle--orange">
+              Take a breath.
+            </Container.SubTitle>
+            <Container.Description className="container__description--orange">
+              Start doing.
+            </Container.Description>
           </Container.Header>
           <Container.Content
             tasks={toDoTasks}
@@ -185,34 +199,34 @@ const TaskList = () => {
             deleteTask={deleteTask}
           >
             {isNewTaskInputVisible ? (
-              <div className='new-task-input'>
+              <div className="new-task-input">
                 <input
-                  type='text'
+                  type="text"
                   value={newTaskText}
                   onChange={handleNewTaskInputChange}
-                  placeholder='Enter new task'
+                  placeholder="Enter new task"
                 />
                 <a
                   onClick={handleNewTaskSubmit}
-                  className='task-add-link--save'
+                  className="task-add-link--save"
                 >
                   save
                 </a>
                 <a
                   onClick={handleCancelNewTask}
-                  className='task-add-link--cancel'
+                  className="task-add-link--cancel"
                 >
                   cancel
                 </a>
               </div>
             ) : (
-              <div className='task-add-container'>
+              <div className="task-add-container">
                 <input
-                  type='checkbox'
+                  type="checkbox"
                   onChange={handleAddTaskClick}
-                  className='task-add-checkbox'
+                  className="task-add-checkbox"
                 />
-                <label onClick={handleAddTaskClick} className='task-add-link'>
+                <label onClick={handleAddTaskClick} className="task-add-link">
                   this is a new task
                 </label>
               </div>
@@ -237,17 +251,21 @@ const TaskList = () => {
               />
             ))}
           </Container.Content>
-          <Container.ClearButton onClick={clearTasks}>erase all</Container.ClearButton>
+          <Container.ClearButton onClick={clearTasks}>
+            erase all
+          </Container.ClearButton>
         </Container.Root>
 
-        <Container.Root borderColor='#4AC959'>
+        <Container.Root borderColor="#4AC959">
           <Container.Header>
             <Container.Title>Done</Container.Title>
-            <Container.SubTitle className='container__subtitle--green'>Congratulations!</Container.SubTitle>
-            <Container.Description className='container__description--green'>{`You have done ${doneTasks.length} tasks`}</Container.Description>
+            <Container.SubTitle className="container__subtitle--green">
+              Congratulations!
+            </Container.SubTitle>
+            <Container.Description className="container__description--green">{`You have done ${doneTasks.length} tasks`}</Container.Description>
           </Container.Header>
           <Container.Content
-            title='Done'
+            title="Done"
             tasks={doneTasks}
             onDrop={handleDrop}
             onDragOver={handleDragOver}
@@ -275,7 +293,9 @@ const TaskList = () => {
               />
             ))}
           </Container.Content>
-          <Container.ClearButton onClick={clearTasks}>erase all</Container.ClearButton>
+          <Container.ClearButton onClick={clearTasks}>
+            erase all
+          </Container.ClearButton>
         </Container.Root>
       </div>
     </div>
