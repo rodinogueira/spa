@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from '../Container';
-import { useAuth } from '../context/AuthContext';
+
 import {
   deleteToDoTask,
   updateToDoTask,

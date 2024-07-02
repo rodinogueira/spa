@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import { AuthProvider } from './context/AuthContext';
 import NavBar from './components/NavBar/NavBar';
 import HeroSection from './HeroSection/HeroSection';
@@ -8,7 +8,7 @@ import GoodThingsSection from './GoodThingsSection/GoodThingsSection';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { Form } from './ContactForm';
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie';
 import './index.css';
 
 const validateToken = () => {
