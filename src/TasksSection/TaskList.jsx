@@ -11,7 +11,6 @@ import Task from './Task';
 import './styles.css';
 
 const TaskList = () => {
-  const { user } = useAuth();
   const [allTasks, setAllTasks] = useState([]);
   const [toDoTasks, setToDoTasks] = useState([]);
   const [doneTasks, setDoneTasks] = useState([]);
@@ -30,12 +29,6 @@ const TaskList = () => {
   useEffect(() => {
     getToDoTasks();
   }, []);
-
-  useEffect(() => {
-    if (user) {
-      getToDoTasks();
-    }
-  }, [user]);
 
   useEffect(() => {
     const filteredToDoTasks = allTasks.filter((task) => !task.done);

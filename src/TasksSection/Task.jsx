@@ -17,7 +17,7 @@ const Task = ({
   const [isEditing, setIsEditing] = useState(false);
   const [editedText, setEditedText] = useState(text);
   const [isChecked, setIsChecked] = useState(false);
-  console.log(isChecked, 'CHECKED');
+
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag(() => ({
