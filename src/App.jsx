@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { AuthProvider } from './context/AuthContext';
 import NavBar from './components/NavBar/NavBar';
 import HeroSection from './HeroSection/HeroSection';
