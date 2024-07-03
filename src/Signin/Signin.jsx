@@ -7,8 +7,8 @@ import './styles.css';
 
 const Signin = ({ onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: 'rdg6@gmail.com',
+    password: '456123',
   });
 
   const handleChange = (e) => {
