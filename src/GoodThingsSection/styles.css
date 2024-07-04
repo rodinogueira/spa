@@ -92,6 +92,7 @@
   color: #fff;
   padding-top: 75px;
   padding-left: 40px;
+  white-space: nowrap;
 }
 
 .good-things-section__read-more {
